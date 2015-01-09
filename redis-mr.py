@@ -50,10 +50,14 @@ def createCmd(*args):
 		cmd.append("".join(start+c))
 	return cmd
 #create a new slave
-def replcate(masterHostPort,slaveHostPort):
+def replcate(masterHostPort,slaveHostPort,masterAuth=None):
 	host,port = _parseHostPort(masterHostPort)
 	s = runCmd(*_parseHostPort(slaveHostPort))
-	cmd = createCmd("SLAVEOF %s %s"%(host,port),"CONFIG REWRITE")
+	if masterAuth != None:
+		cmd = createCmd("SLAVEOF %s %s"%(host,port),"CONFIG SET masterauth %s"%masterAuth,"CONFIG REWRITE")
+	else:
+		cmd = createCmd("SLAVEOF %s %s"%(host,port),"CONFIG REWRITE")
+		
 	msg = s.sendCmd(cmd)
 	s.close()
 	if msg == "OK":
