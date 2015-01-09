@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-#coding:utf-8
+#coding=utf-8
 #author:liuzhenwei
 #email:570962906@qq.com
 #date:2015-01-09
