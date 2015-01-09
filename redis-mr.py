@@ -37,6 +37,7 @@ def _parseHostPort(host_port):
 	return host,int(port)
 #ensure
 def _ensureSlave():
+	"""......"""
 	pass
 
 #create command
