@@ -1,9 +1,9 @@
 # redis-mr
 Create redis master-slave with python
 
-Add a new slave<br />
+Add a new slave, MASTER-PASSWD is optional<br />
 ```python
-[root@localhost ~]#python redis-mr.py replcate MASTER_HOST:MASTER_PORT SLAVE_HOST:SLAVE_PORT
+[root@localhost ~]#python redis-mr.py replcate MASTER_HOST:MASTER_PORT SLAVE_HOST:SLAVE_PORT [MASTER-PASSWD]
 ```
 Delete a slave or promote a slave to  master<br/>
 ```python
