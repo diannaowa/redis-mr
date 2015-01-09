@@ -1,5 +1,5 @@
 # redis-mr
-Create redis master-slave with python
+Create redis master-slave with python<br />
 First,plz install hiredis
 ```python
 [root@localhost~]#easy_install hiredis
